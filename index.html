@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HTML5VIDEO test</title>
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+<script language="javascript" type="text/javascript" src="jquery-1.6.js"></script>
+<script language="javascript" type="text/javascript" src="video_separator.js"></script>
+<script type="text/javascript">document.onkeyup = KeyCheck</script>
+</head>
+
+<body>
+<div id="main">
+
+<div id="video1">
+<video id="invernovideo" src="winter.mp4" width="480" height="360" loop="true" autoplay="true">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div id="video2">
+<video id="primaveravideo" src="primavera.mp4" width="480" height="360" loop="true" autoplay="true">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div id="video3">
+<video id="primaveravideo2" src="rain.mp4" width="480" height="360" loop="true" autoplay="true">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div id="video4">
+<video id="invernovideo2" src="winter.mp4" width="480" height="360" loop="true" autoplay="true">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div id="header">
+::HTML5 - video test ::
+</div>
+</div><!--close main-->
+<div id="description">
+<p id="desctext"> 
+	<strong> Basic instructions:</strong> Roll over the video<br /><br />I used absolute positioning on four different ids containing a different video each, I then added javascript to control the height and/or the width of each.
+	To see the different layers feel free to use these keys to toggle visibility:
+	<p id="wtext">Winter:Left</p>
+	<p id="w2text">Winter2:Down</p>
+	<p id="ftext">Fall:Right</p>
+	<p id="stext">Spring:Up</p>
+<em>Also, click to reset the videos.
+Please note: The rainy video is out of sync because I used a different software for file conversion, I'm going to fix that in the future. The fourth season video will be up soon.</em><br /><br />
+ - Please note - I couldn't find a software I like to convert video files, so this experiment only works in <strong>Google Chrome</strong> and <strong>Safari</strong> so far.
+	</p>
+</div>
+
+
+</body>
+</html>
