@@ -1,72 +1,50 @@
 // JavaScript Document
 $(document).ready(function(){
-	$("#main").mousemove(function(e){
+	$("#video-container").mousemove(function(e){
 		$("#video2").width(e.pageX-this.offsetLeft);
-		$("#video3").height(e.pageY-this.offsetTop);
-		$("#video4").height(e.pageY-this.offsetTop);
+		$("#video3").height(e.pageY-this.offsetTop + 30);
+		$("#video4").height(e.pageY-this.offsetTop + 30);
 		$("#video4").width(e.pageX-this.offsetLeft);
 		
 
 	});
 	
+	function restartVideos(videos){
+		for(var i=0;i<videos.length;i++){
+			var single_vid = document.getElementById(videos[i]);
+			single_vid.currentTime = 0;
+		}
+	}
 	$("#main").click(function(){
 		//alert('pause');
-		document.getElementById('primaveravideo').pause();
-		document.getElementById('invernovideo').pause();
-		document.getElementById('primaveravideo2').pause();
-		document.getElementById('invernovideo2').pause();
-		document.getElementById('primaveravideo').currentTime = 0;
-		document.getElementById('invernovideo').currentTime = 0;
-		document.getElementById('primaveravideo2').currentTime = 0;
-		document.getElementById('invernovideo2').currentTime = 0;
-		document.getElementById('primaveravideo').play();
-		document.getElementById('invernovideo').play();
-		document.getElementById('primaveravideo2').play();
-		document.getElementById('invernovideo2').play();
+		restartVideos(['primaveravideo','invernovideo','primaveravideo2','invernovideo2']);
 	});
 });
-
-//$('#video1').css('visibility','hidden');
+function hideVideos(video, text){
+	if((video).is(":visible")){
+		video.css('display','none');
+		text.css('color','#999');
+	}else{
+		video.css('display','block');
+		text.css('color','#fff');
+	}
+}
 function KeyCheck()
 {
    var KeyID = event.keyCode;
    switch(KeyID)
    {
       case 37:
-      if($('#video1').is(":visible")){
-				$('#video1').css('display','none');
-				$('#wtext').css('color','#999');
-			}else{
-				$('#video1').css('display','block');
-				$('#wtext').css('color','#fff');
-			}
+      hideVideos($('#video1'), $('#wtext'));
       break;
       case 38:
-      if($('#video2').is(":visible")){
-				$('#video2').css('display','none');
-				$('#stext').css('color','#999');
-			}else{
-				$('#video2').css('display','block');
-				$('#stext').css('color','#fff');
-			}
+      hideVideos($('#video2'), $('#w2text'));
       break;
       case 39:
-      if($('#video3').is(":visible")){
-				$('#video3').css('display','none');
-				$('#ftext').css('color','#999');
-			}else{
-				$('#video3').css('display','block');
-				$('#ftext').css('color','#fff');
-			}
+      hideVideos($('#video3'), $('#stext'));
 	    break;
       case 40:
-      if($('#video4').is(":visible")){
-				$('#video4').css('display','none');
-				$('#w2text').css('color','#999');
-			}else{
-				$('#video4').css('display','block');
-				$('#w2text').css('color','#fff');
-			}
+      hideVideos($('#video4'), $('#s2text'));
       break;
    }
 

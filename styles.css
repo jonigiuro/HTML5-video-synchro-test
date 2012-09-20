@@ -8,50 +8,64 @@ body{
 #main{
 	background-color:#000;
 	color:#fff;
-	width:480px;
-	height:360px;
+	width:960px;
 	margin:auto;
 	margin-top:50px;
 }
-
-#video1{
-	border:2px solid #fff;
-	z-index:100;
-	position:absolute;
-	top:48px;
-	overflow:hidden;
-}
-
-#video2{
-	border:2px solid #fff;
-	z-index:101;
-	position:absolute;
-	top:48px;
-	overflow:hidden;
-}
-
-#video3{
-	border:2px solid #fff;
-	z-index:102;
-	position:absolute;
-	top:48px;
-	overflow:hidden;
-}
-
-#video4{
-	border:2px solid #fff;
-	z-index:104;
-	position:absolute;
-	top:48px;
-	overflow:hidden;
-}
-
 #header{
 	font-family:"Helvetica", "Arial", "Sans-Serif";
 	text-align:center;
 	font-size:2em;
 	font-weight:bold;
 	color:#029DE0;
+}
+#video-container{
+	max-height:365px;
+	max-width:480px;
+	overflow:hidden;
+	display:block;
+	height:365px;
+	width:480px;
+	margin:0 auto;
+}
+#video1{
+	border:2px solid #fff;
+	z-index:100;
+	position:absolute;
+	top:120px;
+	overflow:hidden;
+	max-height:365px;
+	max-width:480px;
+}
+
+#video2{
+	border:2px solid #fff;
+	z-index:101;
+	position:absolute;
+	top:120px;
+	overflow:hidden;
+	max-height:365px;
+	max-width:480px;
+}
+
+#video3{
+	border:2px solid #fff;
+	z-index:102;
+	position:absolute;
+	top:120px;
+	overflow:hidden;
+	max-height:365px;
+	max-width:480px;
+}
+
+#video4{
+	border:2px solid #fff;
+	z-index:104;
+	position:absolute;
+	top:120px;
+	overflow:hidden;
+	max-height:365px;
+	max-width:480px;
 }
 
 #description{
@@ -62,6 +76,4 @@ body{
 	font-family:"Helvetica", "Arial", "Sans-Serif";
 }
 
-#desctext{
-	width:480px;
-}
+
